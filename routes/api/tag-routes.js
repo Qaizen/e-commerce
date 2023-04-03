@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const router = require("express").Router();
+const { Tag, Product, ProductTag } = require("../../models");
 
 // The `/api/tags` endpoint
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   Tag.findAll({
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
   }).then((tags) => res.json(tags));
 });
 
-router.get('/:id', (req, res) => {
+router.get("/:id", (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   Tag.findOne({
@@ -32,17 +32,17 @@ router.get('/:id', (req, res) => {
   }).then((tag) => res.json(tag));
 });
 
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   // create a new tag
   Tag.create(req.body)
-  .then((tag) => res.json(tag))
-  .catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .then((tag) => res.json(tag))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   // update a tag's name by its `id` value
   Tag.update(req.body, {
     where: {
@@ -56,7 +56,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
     where: {
@@ -68,7 +68,7 @@ router.delete('/:id', (req, res) => {
         res.status(404).json({ message: "No tag found with this id" });
         return;
       }
-      res.json({message: 'This Tag was deleted!'});
+      res.json({ message: "This Tag was deleted!" });
     })
     .catch((err) => {
       console.log(err);
