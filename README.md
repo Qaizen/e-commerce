@@ -6,7 +6,7 @@ Run the following command for installation:
 - Clone repository onto your local computer.  Run 'npm install'.
 
 ## Instruction:
-In the command line interface, enter 'npm run seed', then 'npm run start'.  Go to Insomnia to view the routes.
+In the command line interface, enter 'npm run seed', then 'npm run start'.  Go to Insomnia to GET routes to return a single ctegory, a single product, and single tag. POST, PUT, and DELETE routes for categories being tested. 
 
 
 ## Link to GitHub:
