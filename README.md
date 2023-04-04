@@ -13,4 +13,4 @@ In the command line interface, enter 'npm run seed', then 'npm run start'.  Go t
 [GitHub](https://github.com/Qaizen/e-commerce)
 
 ## Link to Video:
-[Video](update this)
+[Video](https://youtu.be/cRQNNcMQ5b4)
